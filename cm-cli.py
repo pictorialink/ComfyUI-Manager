@@ -183,6 +183,7 @@ class Ctx:
 
 cmd_ctx = Ctx()
 
+# use '@@' to separate node name and commit id
 def parse_node(node: str):
     if '@@' in node:
         name, commit = node.split('@@', 1)
