@@ -23454,14 +23454,13 @@
         },
         {
             "author": "zhuanqianfish",
-            "title": "TaesdVAEDecoder Node for ComfyUI",
-            "id": "TaesdVAEDecoder",
-            "reference": "https://github.com/zhuanqianfish/TaesdDecoder",
+            "title": "EasyCaptureNode for ComfyUI",
+            "reference": "https://github.com/zhuanqianfish/ComfyUI-EasyNode",
             "files": [
-                "https://github.com/zhuanqianfish/TaesdDecoder"
+                "https://github.com/zhuanqianfish/ComfyUI-EasyNode"
             ],
             "install_type": "git-clone",
-            "description": "use TAESD decoded image.It will result in a slight loss of image quality and a significant decrease in peak video memory during decoding.you need donwload taesd_decoder.pth and taesdxl_decoder.pth to vae_approx folder first."
+            "description": "Capture window content from other programs, easyway combined with LCM for real-time painting"
         }      
     ]
 }
