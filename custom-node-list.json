@@ -23451,6 +23451,17 @@
             ],
             "install_type": "unzip",
             "description": "This is a node to convert an image into a CMYK Halftone dot image."
-        }       
+        },
+        {
+        "author": "Michael Gold",
+        "title": "Hal.fun Hugging Face Model Downloader",
+        "id": "hal-dot-fun-model-downloader",
+        "reference": "https://github.com/michaelgold/ComfyUI-Hal-Dot-Fun-Model-Downloader",
+        "files": [
+          "https://github.com/michaelgold/ComfyUI-Hal-Dot-Fun-Model-Downloader"
+        ],
+        "install_type": "git-clone",
+        "description": "Easily download and install 2D to 3D and Flux models from Hugging Face."
+      }       
     ]
 }
