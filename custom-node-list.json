@@ -23451,6 +23451,17 @@
             ],
             "install_type": "unzip",
             "description": "This is a node to convert an image into a CMYK Halftone dot image."
-        }       
+        },
+        {
+            "author": "zhuanqianfish",
+            "title": "TaesdVAEDecoder Node for ComfyUI",
+            "id": "TaesdVAEDecoder",
+            "reference": "https://github.com/zhuanqianfish/TaesdDecoder",
+            "files": [
+                "https://github.com/zhuanqianfish/TaesdDecoder"
+            ],
+            "install_type": "git-clone",
+            "description": "use TAESD decoded image.It will result in a slight loss of image quality and a significant decrease in peak video memory during decoding.you need donwload taesd_decoder.pth and taesdxl_decoder.pth to vae_approx folder first."
+        }      
     ]
 }
