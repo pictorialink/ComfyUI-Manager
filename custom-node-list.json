@@ -21228,9 +21228,6 @@
             "install_type": "copy",
             "description": "GIS Processing Nodes for ComfyUI"
         },
-
-
-
         {
             "author": "theally",
             "title": "TheAlly's Custom Nodes",
@@ -21288,6 +21285,17 @@
             ],
             "install_type": "git-clone",
             "description": "Advanced LLM driven node with many custom instructions, including node finder, expert prompter and json converter."
+        },
+        {
+            "author": "lum3on",
+            "title": "HiDream Sampler",
+            "id": "hidream-sampler",
+            "reference": "https://github.com/lum3on/HiDream-Sampler",
+            "files": [
+                "https://github.com/lum3on/comfyui_HiDream-Sampler"
+            ],
+            "install_type": "copy",
+            "description": "A custom ComfyUI node for generating images using the HiDream AI model. Uses quantization for lower memory usage."
         }
     ]
 }
