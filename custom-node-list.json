@@ -24214,9 +24214,9 @@
             "id": "bigmonComfyuiResolutionPresets",
             "reference": "https://github.com/big-mon/ComfyUI-ResolutionPresets",
             "files": [
-                "https://raw.githubusercontent.com/big-mon/ComfyUI-ResolutionPresets/refs/heads/main/resolution_presets.py"
+                "httpshttps://github.com/big-mon/ComfyUI-ResolutionPresets"
             ],
-            "install_type": "copy",
+            "install_type": "git-clone",
             "description": "Provides recommended resolution presets specifically. Select a preset from the dropdown to easily output the corresponding width and height values for use with nodes like Empty Latent Image."
         }
     ]
