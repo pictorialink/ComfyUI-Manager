@@ -24216,7 +24216,7 @@
             "files": [
                 "https://github.com/leoleelxh/Comfy-Topaz-Photo"
             ],
-            "install_type": "copy",
+            "install_type": "git-clone",
             "description": "A new ComfyUI node for integrating Topaz Photo AI's powerful image enhancement capabilities"
         }
     ]
