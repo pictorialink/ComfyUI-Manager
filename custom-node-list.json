@@ -24399,7 +24399,7 @@
                 "https://github.com/nisaruj/comfyui-daam"
             ],
             "install_type": "git-clone",
-            "description": "ComfyUI custom nodes for DAAM"
+            "description": "ComfyUI custom nodes for Diffusion Attentive Attribution Maps (DAAM)"
         }
     ]
 }
