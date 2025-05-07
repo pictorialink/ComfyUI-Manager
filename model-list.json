@@ -944,8 +944,6 @@
       "url": "https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/t5xxl_fp8_e4m3fn.safetensors",
       "size": "4.89GB"
     },
-
-
     {
       "name": "city96/t5-v1_1-xxl-encoder-Q3_K_L.gguf",
       "type": "clip",
@@ -1067,7 +1065,6 @@
       "url": "https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/resolve/main/t5-v1_1-xxl-encoder-f32.gguf",
       "size": "19.1GB"
     },
-    
     {
       "name": "Comfy-Org/clip_l",
       "type": "clip",
@@ -2788,9 +2785,6 @@
       "url": "https://huggingface.co/Kwai-Kolors/Kolors-IP-Adapter-FaceID-Plus/resolve/main/ipa-faceid-plus.bin",
       "size": "2.39GB"
     },
-
-
-
     {
       "name": "GFPGANv1.4.pth",
       "type": "GFPGAN",
@@ -3430,8 +3424,6 @@
       "url": "https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Union/resolve/main/diffusion_pytorch_model.safetensors",
       "size": "6.6GB"
     },
-
-
     {
       "name": "InstantX/FLUX.1-dev-IP-Adapter",
       "type": "IP-Adapter",
@@ -3633,8 +3625,6 @@
       "url": "https://huggingface.co/InstantX/SD3-Controlnet-Tile/resolve/main/diffusion_pytorch_model.safetensors",
       "size": "1.19GB"
     },
-
-
     {
       "name": "stabilityai/SD3.5-Large-Controlnet-Blur",
       "type": "controlnet",
@@ -3902,8 +3892,6 @@
       "url": "https://huggingface.co/PixArt-alpha/PixArt-XL-2-1024-MS/resolve/main/transformer/diffusion_pytorch_model.safetensors",
       "size": "2.45GB"
     },
-
-
     {
       "name": "hunyuan_dit_1.2.safetensors",
       "type": "checkpoint",
@@ -4546,7 +4534,6 @@
       "url": "https://huggingface.co/Kijai/MoGe_safetensors/resolve/main/MoGe_ViT_L_fp16.safetensors",
       "size": "1.26GB"
     },
-    
     {
       "name": "LTX-Video 2B v0.9 Checkpoint",
       "type": "checkpoint",
@@ -4580,7 +4567,50 @@
       "url": "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltx-video-2b-v0.9.5.safetensors",
       "size": "6.34GB"
     },
-
+    {
+      "name": "LTX-Video Spatial Upscaler v0.9.7",
+      "type": "checkpoint",
+      "base": "LTX-Video",
+      "save_path": "checkpoints/LTXV",
+      "description": "Spatial upscaler model for LTX-Video. This model enhances the spatial resolution of generated videos.",
+      "reference": "https://huggingface.co/Lightricks/LTX-Video",
+      "filename": "ltxv-spatial-upscaler-0.9.7.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-spatial-upscaler-0.9.7.safetensors",
+      "size": "505MB"
+    },
+    {
+      "name": "LTX-Video Temporal Upscaler v0.9.7",
+      "type": "checkpoint",
+      "base": "LTX-Video",
+      "save_path": "checkpoints/LTXV",
+      "description": "Temporal upscaler model for LTX-Video. This model enhances the temporal resolution and smoothness of generated videos.",
+      "reference": "https://huggingface.co/Lightricks/LTX-Video",
+      "filename": "ltxv-temporal-upscaler-0.9.7.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-temporal-upscaler-0.9.7.safetensors",
+      "size": "524MB"
+    },
+    {
+      "name": "LTX-Video 13B v0.9.7",
+      "type": "checkpoint",
+      "base": "LTX-Video",
+      "save_path": "checkpoints/LTXV",
+      "description": "High-resolution quality LTX-Video 13B model.",
+      "reference": "https://huggingface.co/Lightricks/LTX-Video",
+      "filename": "ltxv-13b-0.9.7-dev.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-dev.safetensors",
+      "size": "28.6GB"
+    },
+    {
+      "name": "LTX-Video 13B FP8 v0.9.7",
+      "type": "checkpoint",
+      "base": "LTX-Video",
+      "save_path": "checkpoints/LTXV",
+      "description": "Quantized version of the LTX-Video 13B model, optimized for lower VRAM usage while maintaining high quality.",
+      "reference": "https://huggingface.co/Lightricks/LTX-Video",
+      "filename": "ltxv-13b-0.9.7-dev-fp8.safetensors",
+      "url": "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-dev-fp8.safetensors",
+      "size": "15.7GB"
+    },
     {
       "name": "XLabs-AI/flux-canny-controlnet-v3.safetensors",
       "type": "controlnet",
@@ -4930,8 +4960,6 @@
       "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors",
       "size": "1.26GB"
     },
-
-
     {
       "name": "Comfy-Org/umt5_xxl_fp16.safetensors",
       "type": "clip",
@@ -4954,7 +4982,6 @@
       "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
       "size": "6.74GB"
     },
-
     {
       "name": "lllyasviel/FramePackI2V_HY",
       "type": "FramePackI2V",
