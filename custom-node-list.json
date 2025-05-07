@@ -25361,7 +25361,8 @@
                 "https://github.com/Irsalistic/comfyui-dam-object-extractor"
             ],
             "description": "Extract object names and descriptions from masked regions using NVIDIA's DAM model",
-            "tags": ["object recognition", "vision", "image analysis"]
+            "tags": ["object recognition", "vision", "image analysis"],
+            "install_type": "git-clone"
         }
     ]
 }
