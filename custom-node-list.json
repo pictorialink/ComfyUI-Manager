@@ -25352,6 +25352,18 @@
             ],
             "install_type": "unzip",
             "description": "This is a node to convert an image into a CMYK Halftone dot image."
+        },
+        {
+            "title": "ComfyUI DAM Object Extractor",
+            "description": "Extract object names and descriptions from masked regions using NVIDIA's DAM model",
+            "author": "Irsalistic",
+            "repository": "https://github.com/Irsalistic/comfyui-dam-object-extractor",
+            "tags": ["object recognition", "vision", "image analysis"],
+            "pip": [],
+            "node_list": [
+            "DAMObjectNameNode",
+            "DAMVisualizeNode"
+            ]
         }
     ]
 }
