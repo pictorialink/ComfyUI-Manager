@@ -25613,9 +25613,9 @@
             "id": "ModelQuantizer",
             "reference": "https://github.com/lum3on/ComfyUI-ModelQuantizer",
             "files": [
-                "https://github.com/lum3on/ComfyUI-ModelQuantizer/blob/main/nodes.py"
+                "https://github.com/lum3on/ComfyUI-ModelQuantizer"
             ],
-            "install_type": "unzip",
+            "install_type": "git-clone",
             "description": "This is a node to converts models into Fp8, bf16, fp16."
         }
     ]
