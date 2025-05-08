@@ -19287,6 +19287,16 @@
             "description": "Make AudioX avialbe in ComfyUI."
         },
         {
+            "author": "Yuan-ManX",
+            "title": "ComfyUI-Muyan-TTS",
+            "reference": "https://github.com/Yuan-ManX/ComfyUI-Muyan-TTS",
+            "files": [
+                "https://github.com/Yuan-ManX/ComfyUI-Muyan-TTS"
+            ],
+            "install_type": "git-clone",
+            "description": "Make Muyan-TTS avialbe in ComfyUI."
+        },
+        {
             "author": "Starnodes2024",
             "title": "ComfyUI_StarNodes",
             "reference": "https://github.com/Starnodes2024/ComfyUI_StarNodes",
