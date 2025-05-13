@@ -1294,7 +1294,7 @@ class UnifiedManager:
                 if res != 0:
                     return result.fail(f"Failed to clone repo: {clone_url}")
             else:
-                repo = git.Repo.clone_from(clone_url, repo_path, recursive=True, progress=GitProgress())
+                repo = git.Repo.clone_from(clone_url, repo_path, recursive=True, progress=GitProgress(), depth=1)
                 repo.git.clear_cache()
                 repo.close()
 
@@ -2133,7 +2133,7 @@ async def gitclone_install(url, instant_execution=False, msg_prefix='', no_deps=
                 if res != 0:
                     return result.fail(f"Failed to clone '{clone_url}' into  '{repo_path}'")
             else:
-                repo = git.Repo.clone_from(clone_url, repo_path, recursive=True, progress=GitProgress())
+                repo = git.Repo.clone_from(clone_url, repo_path, recursive=True, progress=GitProgress(), depth=1)
                 if commit_id!= "":
                     repo.git.checkout(commit_id)
                     repo.git.submodule('update', '--init', '--recursive')

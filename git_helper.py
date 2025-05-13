@@ -71,7 +71,7 @@ def gitclone(custom_nodes_path, url, target_hash=None, repo_path=None):
         repo_path = os.path.join(custom_nodes_path, repo_name)
 
     # Clone the repository from the remote URL
-    repo = git.Repo.clone_from(url, repo_path, recursive=True, progress=GitProgress())
+    repo = git.Repo.clone_from(url, repo_path, recursive=True, progress=GitProgress(), depth=1)
 
     if target_hash is not None:
         print(f"CHECKOUT: {repo_name} [{target_hash}]")
