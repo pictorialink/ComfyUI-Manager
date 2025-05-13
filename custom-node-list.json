@@ -16994,7 +16994,7 @@
                 "https://github.com/Dontdrunk/ComfyUI-DD-Nodes"
             ],
             "install_type": "git-clone",
-            "description": "A plugin offering supplementary Chinese translations for ComfyUI custom nodes."
+            "description": "Provide powerful frontend and backend integration node packages for ComfyUI - this is an exceptionally robust integration extension."
         },
         {
             "author": "Dontdrunk",
@@ -17005,7 +17005,7 @@
                 "https://github.com/Dontdrunk/ComfyUI-DD-Translation"
             ],
             "install_type": "git-clone",
-            "description": "Provide powerful frontend and backend integration node packages for ComfyUI - this is an exceptionally robust integration extension."
+            "description": "A plugin offering supplementary Chinese translations for ComfyUI custom nodes."
         },
         {
             "author": "codecringebinge",
