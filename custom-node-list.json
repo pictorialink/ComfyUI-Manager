@@ -19287,6 +19287,16 @@
             "description": "Make Muyan-TTS avialbe in ComfyUI."
         },
         {
+            "author": "Yuan-ManX",
+            "title": "ComfyUI-Matrix-Game",
+            "reference": "https://github.com/Yuan-ManX/ComfyUI-Matrix-Game",
+            "files": [
+                "https://github.com/Yuan-ManX/ComfyUI-Matrix-Game"
+            ],
+            "install_type": "git-clone",
+            "description": "Make Matrix-Game avialbe in ComfyUI."
+        },
+        {
             "author": "Starnodes2024",
             "title": "ComfyUI_StarNodes",
             "reference": "https://github.com/Starnodes2024/ComfyUI_StarNodes",
