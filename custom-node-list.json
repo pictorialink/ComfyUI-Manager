@@ -26221,9 +26221,9 @@
           "author": "2frames.app",
           "title": "AQnodes for ComfyUI",
           "id": "AQnodes",
-          "reference": "https://github.com/2frames/ComfyUI-AQnodes/",
+          "reference": "https://github.com/2frames/ComfyUI-AQnodes",
           "files": [
-            "https://github.com/2frames/ComfyUI-AQnodes/"
+            "https://github.com/2frames/ComfyUI-AQnodes"
           ],
           "install_type": "git-clone",
           "description": "Nodes for ComfyUI, mostly for llm calling and automatizing pulid multiface."
