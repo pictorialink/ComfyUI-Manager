@@ -249,14 +249,14 @@ export class ModelManager {
 			bindContainerResize: true,
 
 			cellResizeObserver: (rowItem, columnItem) => {
-				const autoHeightColumns = ['name', 'description'];
+				const autoHeightColumns = ['name', 'description', 'folder_path_source'];
 				return autoHeightColumns.includes(columnItem.id)
 			},
 
 			// updateGrid handler for filter and keywords
 			rowFilter: (rowItem) => {
 
-				const searchableColumns = ["name", "type", "base", "description", "filename", "save_path"];
+				const searchableColumns = ["name", "type", "base", "description", "filename", "save_path", "folder_path_source"];
 				const models_extensions = ['.ckpt', '.pt', '.pt2', '.bin', '.pth', '.safetensors', '.pkl', '.sft'];
 
 				let shouldShown = grid.highlightKeywordsFilter(rowItem, searchableColumns, this.keywords);
@@ -378,6 +378,12 @@ export class ModelManager {
 		}, {
 			id: 'description',
 			name: 'Description',
+			width: 400,
+			maxWidth: 5000,
+			classMap: 'cmm-node-desc'
+		}, {
+			id: 'folder_path_source',
+			name: 'Folder Path Source',
 			width: 400,
 			maxWidth: 5000,
 			classMap: 'cmm-node-desc'

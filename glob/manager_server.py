@@ -921,14 +921,23 @@ def check_model_installed(json_obj):
                     item['installed'] = 'True'
 
             if 'installed' not in item:
+                item['installed'] = 'False'
+
                 if item['filename'] == '<huggingface>':
                     filename = os.path.basename(item['url'])
                 else:
                     filename = item['filename']
 
-                fullpath = os.path.join(folder_paths.models_dir, item['save_path'], filename)
+                if model_dir_name in folder_paths.folder_names_and_paths:
+                    paths = folder_paths.folder_names_and_paths[model_dir_name][0]
 
-                item['installed'] = 'True' if os.path.exists(fullpath) else 'False'
+                    for folder_path in paths:
+                        base_path = os.path.split(folder_path)[0]
+                        fullpath = os.path.join(base_path, item['save_path'], filename)
+
+                        if os.path.exists(fullpath):
+                            item['installed'] = 'True'
+                            item['folder_path_source'] = base_path
 
     with concurrent.futures.ThreadPoolExecutor(8) as executor:
         for item in json_obj['models']:
