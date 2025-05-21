@@ -880,32 +880,19 @@ async def fetch_customnode_alternatives(request):
 
 
 def check_model_installed(json_obj):
-    def is_exists(model_dir_name, filename, url):
+    def get_installed_model_paths(model_dir_name, filename, url):
         if filename == '<huggingface>':
             filename = os.path.basename(url)
 
         dirs = folder_paths.get_folder_paths(model_dir_name)
 
-        for x in dirs:
-            if os.path.exists(os.path.join(x, filename)):
-                return True
-
-        return False
-    
-    def get_base_folder_path(model_dir_name, filename, url):
-        if filename == '<huggingface>':
-            filename = os.path.basename(url)
-
-        dirs = folder_paths.get_folder_paths(model_dir_name)
-
-        results = []
+        full_paths = []
         for x in dirs:
             full_path = os.path.join(x, filename)
             if os.path.exists(full_path):
-                results.append(full_path)
+                full_paths.append(full_path)
 
-        return results
-    
+        return full_paths
 
     model_dir_names = ['checkpoints', 'loras', 'vae', 'text_encoders', 'diffusion_models', 'clip_vision', 'embeddings',
                        'diffusers', 'vae_approx', 'controlnet', 'gligen', 'upscale_models', 'hypernetworks',
@@ -925,10 +912,11 @@ def check_model_installed(json_obj):
 
         if 'diffusion' not in item['filename'] and 'pytorch' not in item['filename'] and 'model' not in item['filename']:
             model_dir_name = model_dir_name_map.get(item['type'].lower())
-            full_paths = get_base_folder_path(model_dir_name, item['filename'], item['url'])
 
             # non-general name case
             if item['filename'] in total_models_files:
+                full_paths = get_installed_model_paths(model_dir_name, item['filename'], item['url'])
+
                 item['installed'] = 'True'
                 item['full_paths'] = full_paths
                 return
@@ -936,14 +924,20 @@ def check_model_installed(json_obj):
         if item['save_path'] == 'default':
             model_dir_name = model_dir_name_map.get(item['type'].lower())
             if model_dir_name is not None:
-                item['installed'] = str(is_exists(model_dir_name, item['filename'], item['url']))
+                full_paths = get_installed_model_paths(model_dir_name, item['filename'], item['url'])
+
+                item['installed'] = str(len(fulls_paths) > 0)
+                item['full_paths'] = full_paths
             else:
                 item['installed'] = 'False'
         else:
             model_dir_name = item['save_path'].split('/')[0]
             if model_dir_name in folder_paths.folder_names_and_paths:
-                if is_exists(model_dir_name, item['filename'], item['url']):
+                full_paths = get_installed_model_paths(model_dir_name, item['filename'], item['url'])
+
+                if len(full_paths) > 0:
                     item['installed'] = 'True'
+                    item['full_paths'] = full_paths
 
             if 'installed' not in item:
                 item['installed'] = 'False'
