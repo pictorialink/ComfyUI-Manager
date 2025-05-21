@@ -256,7 +256,7 @@ export class ModelManager {
 			// updateGrid handler for filter and keywords
 			rowFilter: (rowItem) => {
 
-				const searchableColumns = ["name", "type", "base", "description", "filename", "save_path", "full_paths", "group"];
+				const searchableColumns = ["name", "type", "base", "description", "filename", "save_path", "full_paths"];
 				const models_extensions = ['.ckpt', '.pt', '.pt2', '.bin', '.pth', '.safetensors', '.pkl', '.sft'];
 
 				let shouldShown = grid.highlightKeywordsFilter(rowItem, searchableColumns, this.keywords);
@@ -382,6 +382,14 @@ export class ModelManager {
 			maxWidth: 5000,
 			classMap: 'cmm-node-desc'
 		}, {
+			id: "save_path",
+			name: 'Save Path',
+			width: 200
+		}, {
+			id: 'filename',
+			name: 'Filename',
+			width: 200
+		}, {
 			id: 'full_paths',
 			name: 'Full Paths',
 			width: 200,
@@ -396,18 +404,6 @@ export class ModelManager {
 					return full_paths;
 				}
 			}
-		}, {
-			id: "save_path",
-			name: 'Save Path',
-			width: 200
-		}, {
-			id: 'filename',
-			name: 'Filename',
-			width: 200
-		}, {
-			id: 'group',
-			name: 'Group',
-			width: 200
 		}];
 
 		restoreColumnWidth(gridId, columns);

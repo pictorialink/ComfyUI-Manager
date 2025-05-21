@@ -927,8 +927,6 @@ def check_model_installed(json_obj):
             model_dir_name = model_dir_name_map.get(item['type'].lower())
             full_paths = get_base_folder_path(model_dir_name, item['filename'], item['url'])
 
-            item['group'] = f"A"
-            
             # non-general name case
             if item['filename'] in total_models_files:
                 item['installed'] = 'True'
@@ -936,15 +934,12 @@ def check_model_installed(json_obj):
                 return
 
         if item['save_path'] == 'default':
-            item['group'] = 'B'
             model_dir_name = model_dir_name_map.get(item['type'].lower())
             if model_dir_name is not None:
                 item['installed'] = str(is_exists(model_dir_name, item['filename'], item['url']))
             else:
                 item['installed'] = 'False'
         else:
-            item['group'] = 'C'
-
             model_dir_name = item['save_path'].split('/')[0]
             if model_dir_name in folder_paths.folder_names_and_paths:
                 if is_exists(model_dir_name, item['filename'], item['url']):
